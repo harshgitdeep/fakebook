@@ -65,9 +65,9 @@ export default function Leftbar(){
                         <font>Groups</font>
                     </a>
                 </div>
-                <Groups image={"images/group-img-2.png"} title={"Bachelor of Science..."}/>
-                <Groups image={"images/group-img-1.jpg"} title={"Leetcode.io"}/>
-                <Groups image={"images/fp2.png"} title={"Bachelor of Science..."}/>
+                <Groups image={"https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"} title={"React Community"}/>
+                <Groups image={"https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"} title={"Leetcode"}/>
+                <Groups image={"https://avatars.githubusercontent.com/u/110965119?s=200&v=4"} title={"OpenSource Chandigarh"}/>
             </div>
 
             <div className="flex-item">

@@ -4,25 +4,6 @@ export default function Topbar(){
     const [isOpen, setIsOpen] = useState(false)
     const container = useRef()
 
-    useEffect(()=> {
-        container.current.classList.toggle('block')
-    }, [isOpen])
-
-    useEffect(()=> {
-        function handleScroll(){
-            container.current.classList.remove('block')
-        }
-        window.addEventListener('scroll', handleScroll)
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
-
-    function handleClick(){
-        setIsOpen(open => !open)
-    }
-
     return (
         <header>
             <nav>
@@ -31,7 +12,7 @@ export default function Topbar(){
                 </div>
                 <div className="search hover">
                     <i className="fa-sharp fa-solid fa-magnifying-glass search_icon"></i>
-                    <input type="text" placeholder="Search Facebook"/>
+                    <input type="text" placeholder="Search Fakebook"/>
                 </div>
                 <div className="top-icon hover toggle-menu">
                     <a href="#!"><img src="images/bars.png" alt="" title="Menu"/></a>
@@ -49,11 +30,8 @@ export default function Topbar(){
                             <p className="top-icon-p"><small>Notifications</small></p>
                         </div>
                     </li>
-                    <li className="top-icon profile-nav" onClick={handleClick} ref={container}>
+                    <li className="top-icon profile-nav">
                         <a><img src="images/harsh.png" alt=""/></a>
-                        <ul className="new">
-                            <h3> Hi Harshdeep!      </h3>
-                        </ul>
                     </li>
                 </ul>
             </nav>
